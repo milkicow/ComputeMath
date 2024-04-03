@@ -1,6 +1,7 @@
 # 6 lab
 
 ## Theory
+### Explicit methods
 In this lab using Runge-Kutta, Adams and backward differentiation methods I numerically solve the Lorentz system with parametrs: b = 8/3, $\sigma$ = 10, r = 28, $0 <= t <= 50$
 
 $
@@ -49,4 +50,37 @@ For given Lorentz system:
 Diverge of second-degree BDM method:
 <p align="center">
   <img src="graphs/diverge.png">
+</p>
+
+
+### Implicit methods
+Using implicit Runge-Kutta, Rosenbrock and Nordsik methods I numerically solve the system below:
+
+<p align="center">
+  <img src="images/implicit_task.jpg">
+</p>
+
+### Runge-Kutta method
+
+Same implicit method with Butcher table:
+<p align="center">
+  <img src="images/implicit_runge_kutta.png">
+</p>
+
+### Rosenbrock method
+<p align="center">
+  <img src="images/rosenbrock.png">
+</p>
+
+### Nordsik representation of Adams 4th order method
+<p align="center">
+  <img src="images/nordsik.png">
+</p>
+
+### Results
+
+If you decrease step of grid, graphs will not differ
+
+<p align="center">
+  <img src="graphs/implicit.png">
 </p>
