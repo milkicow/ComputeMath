@@ -133,7 +133,7 @@ def explicit_methods():
     x2, y2, z2 = prepare_arrays_expl(y_list2)
     do_plot_expl(x0, y0, z0, x1, y1, z1, x2, y2, z2)
 
-alpha = 0.2
+alpha = 2.0
 betta = 0.0015
 gamma = 5.0
 tetta0 = 3.0
@@ -141,6 +141,7 @@ fi0 = 0.0525
 C = 5.0
 k1 = 0.05
 k2 = 0.35
+
 
 def f_tetta(y): # y = [tetta, fi]
     return (alpha * y[0] * y[0]) / (y[0] + tetta0) - k1 * y[0] - gamma * y[0] * y[1]
@@ -264,13 +265,13 @@ def do_plot_impl(tetta0, fi0, tetta1, fi1, tetta2, fi2, t):
     plt.show()
 
 def implicit_methods():
-    y_list, t_list = rosenbrock(F, np.array([tetta0, fi0]), 100)
+    y_list, t_list = rosenbrock(F, np.array([tetta0, fi0]), 10)
     tetta1_, fi1_ = prepare_arrays_impl(y_list)
 
-    y_list, t_list = impl_runge_kutta(F, np.array([tetta0, fi0]), 100)
+    y_list, t_list = impl_runge_kutta(F, np.array([tetta0, fi0]), 10)
     tetta0_, fi0_ = prepare_arrays_impl(y_list)
 
-    y_list, t_list = nordsik(F, np.array([tetta0, fi0]), 100)
+    y_list, t_list = nordsik(F, np.array([tetta0, fi0]), 10)
     tetta2_, fi2_ = prepare_arrays_impl(y_list)
     do_plot_impl(tetta0_, fi0_, tetta1_, fi1_, tetta2_, fi2_, t_list)
 
