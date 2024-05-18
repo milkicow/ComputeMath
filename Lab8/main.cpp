@@ -258,7 +258,7 @@ int main() {
     mpi::environment env;
     mpi::communicator world;
 
-    Transport eq(&world, 10e-3, 10, 10e-3, 10);
+    Transport eq(&world, 10e-3, 1, 10e-3, 2);
 
     // eq.grid_four_point();
     // eq.grid_corner();
